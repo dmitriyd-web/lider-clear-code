@@ -1,0 +1,160 @@
+@media screen and (max-width: 992px) {
+    
+    .sidebar {
+        position: fixed;
+        left: 0;
+        top: 140px;
+        min-height: calc(100vh - 129px);
+        border-top: 1px solid #E6EFF5;
+        transition: .3s;
+        transform: translateX(-1000%);
+        z-index: 50;
+    }
+
+    .sidebar.open {
+        transform: translateX(0);
+    }
+
+    .header {
+        display: grid;
+        grid-template-areas: 
+            "toggle_menu page__title user__profile"
+            "form__search form__search form__search";
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 25px 25px 20px;
+    }
+
+    .header .toggle_menu {
+        display: block;
+        grid-area: toggle_menu;
+    }
+    .header .page__title {
+        grid-area: page__title;
+        font-size: 20px;
+        line-height: 24.2px;
+        margin: 0 auto;
+    }
+    .header .user__profile {
+        grid-area: user__profile;
+        width: 35px;
+        height: 35px;
+        margin: 0 0 0 auto;
+    }
+    .header .form__search {
+        grid-area: form__search;
+        max-width: 100%;
+        width: 375px;
+        height: 40px;
+        margin: 20px auto 0;
+        padding: 12px 19px;
+    }
+
+    .header .form__search button {
+        width: 16px;
+        height: 16px;
+        margin: 0 10px 0 0;
+    }
+
+    .header .form__search input {
+        font-size: 13px;
+        line-height: 15.73px;
+    }
+
+    .header .profile__settings, .header .profile__notification {
+        display: none;
+    }
+
+    .profile {
+        margin: 25px;
+        padding: 22px 20px 25px;
+    }
+
+    .profile .profile__links {
+        justify-content: space-between;
+        gap: 0;
+        margin: 0;
+    }
+
+    .profile .profile__links a {
+    font-size: 13px;
+    line-height: 15.73px;
+        padding: 7px 6px;
+    }
+
+    .profile .profile__information {
+        margin: 25px 0 0;
+    }
+
+    .profile .profile__information .profile__photo {
+        width: 175px;
+        margin: 0 auto 22px;
+    }
+
+    .profile .profile__information .profile__photo .user__profile-photo {
+        width: 175px;
+        height: 170px;
+    }
+
+    .profile .profile__information .profile__photo .profile__photo-edit {
+        width: 38.64px;
+        height: 38.64px;
+        right: -3px;
+        bottom: 19px;    
+    }
+
+    .profile .profile__information .profile__fields {
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+
+    .profile .profile__information .profile__fields .input__field {
+        margin: 0 0 12px;
+    }
+
+    .profile .profile__information .profile__fields .input__field label {
+        font-size: 13px;
+        line-height: 15.73px;
+    }
+
+    .profile .profile__information .profile__fields .input__field input, .profile .profile__information .profile__fields .input__field select {
+        font-family: Inter;
+        font-size: 12px;
+        margin: 9px 0 0;
+        padding: 11px 15px;
+        border-radius: 10px;
+    }
+
+    .profile .profile__information .profile__fields button {
+        height: 40px;
+        font-size: 15px;
+        margin: 4px 0 0 auto;
+        border-radius: 9px;
+    }
+
+}
+
+@media screen and (max-width: 576px) {
+
+    .navbar__menu li a {
+        font-size: 13px;
+        line-height: 15.73px;
+        padding: 10px 0 10px 20px;
+    }
+
+    .navbar__menu li a svg {
+        width: 15px;
+    }
+
+    .navbar__menu li a.current::before {
+        top: 2px;
+        height: 46px;
+    }
+
+    .profile .profile__information .profile__fields .input__field {
+        width: 100%;
+    }
+    
+}   
